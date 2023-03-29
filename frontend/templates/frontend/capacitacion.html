@@ -1,0 +1,239 @@
+{% extends 'layauts/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="p-0">
+        <div class="container-fluid">
+            <div class="card mb-0">
+                <div class="card-body">
+                    <div class="row gx-5 bg-white">
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart19"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart20"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart21"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block otherscripts %}
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <script src="{% static 'js/amCharts/amcharts.js'%}"></script>
+    <script src="{% static 'js/amCharts/serial.min.js'%}"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var BARCHARTHOME = document.getElementById('barChartHome2');
+
+        var chart19 = AmCharts.makeChart("chart19", {
+            "titles": [
+                {
+                    "text": "Total de horas capacitadas a un colaborador",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#8ADA96", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "percent": 30,
+                },
+                {
+                "year": "2020",
+                "percent": 37,
+                },
+                {
+                "year": "2021",
+                "percent": 47,
+                },
+                {
+                "year": "2022",
+                "percent": 47,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<span style='font-size:15px;'>[[value]]</span>",
+                "fillAlphas": 1,
+                "title": "Efectivo / Número de Casos",
+                "type": "column",
+                "valueField": "percent",
+                "labelText": "[[value]]"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+        var chart20 = AmCharts.makeChart("chart20", {
+            "titles": [
+                {
+                    "text": "El total de horas capacitadas en todo el año",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#52915D", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "percent": 260106,
+                },
+                {
+                "year": "2020",
+                "percent": 266221,
+                },
+                {
+                "year": "2021",
+                "percent": 400636,
+                },
+                {
+                "year": "2022",
+                "percent": 416874,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<span style='font-size:15px;'>[[value]]</span>",
+                "fillAlphas": 1,
+                "title": "Efectivo / Número de Casos",
+                "type": "column",
+                "valueField": "percent",
+                "labelText": "[[value]]"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+        var chart21 = AmCharts.makeChart("chart21", {
+            "titles": [
+                {
+                    "text": "El total de dinero invertido en los talleres de capacitación",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#335739", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "percent": 3505972,
+                },
+                {
+                "year": "2020",
+                "percent": 3754612,
+                },
+                {
+                "year": "2021",
+                "percent": 5774868,
+                },
+                {
+                "year": "2022",
+                "percent": 6195734,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<span style='font-size:15px;'>[[value]]</span>",
+                "fillAlphas": 1,
+                "title": "Efectivo / Número de Casos",
+                "type": "column",
+                "valueField": "percent",
+                "labelText": "[[value]]"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+
+    });
+    </script>
+{% endblock %}

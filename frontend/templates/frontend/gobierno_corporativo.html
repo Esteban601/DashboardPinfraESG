@@ -1,0 +1,587 @@
+{% extends 'layauts/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="p-0">
+        <div class="container-fluid">
+            <div class="card mb-0">
+                <div class="card-body">
+                    <div class="row gx-5 bg-white">
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart12"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart13"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart14"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart15"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart16"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart17"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart" style="width:100%;height: 400px" id="chart18"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block otherscripts %}
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <script src="{% static 'js/amCharts/amcharts.js'%}"></script>
+    <script src="{% static 'js/amCharts/serial.min.js'%}"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var BARCHARTHOME = document.getElementById('barChartHome2');
+
+        var chart12 = AmCharts.makeChart("chart12", {
+            "titles": [
+                {
+                    "text": "La cantidad de accionistas mayoritarios",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "Número de Accionistas",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#52915D", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "percent": 8,
+                },
+                {
+                "year": "2020",
+                "percent": 8,
+                },
+                {
+                "year": "2021",
+                "percent": 8,
+                },
+                {
+                "year": "2022",
+                "percent": 8,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<span style='font-size:15px;'>[[value]]</span>",
+                "fillAlphas": 1,
+                "title": "Efectivo / Número de Casos",
+                "type": "column",
+                "valueField": "percent",
+                "labelText": "[[value]]"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+        var chart13 = AmCharts.makeChart("chart13", {
+            "titles": [
+                {
+                    "text": "Relación Hombres y Mujeres.",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "Porcentaje accionistas H y M",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#335739", "#8ADA96"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "legend": {
+                "useGraphSettings": true,
+                "markerSize": 12,
+                "valueWidth": 0,
+                "verticalGap": 0,
+                "align": "center"
+             },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "Male": 50,
+                "Female": 50,
+                },
+                {
+                "year": "2020",
+                "Male": 50,
+                "Female": 50,
+                },
+                {
+                "year": "2021",
+                "Male": 50,
+                "Female": 50,
+                },
+                {
+                "year": "2022",
+                "Male": 50,
+                "Female": 50,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [
+                {
+                "balloonText": "<span style='font-size:15px;'>[[value]]%</span>",
+                "fillAlphas": 1,
+                "title": "Porcentaje accionistas hombres",
+                "type": "column",
+                "valueField": "Male",
+                "labelText": "[[value]]%"
+            },
+                {
+                "balloonText": "<span style='font-size:15px;'>[[value]]%</span>",
+                "fillAlphas": 1,
+                "title": "Porcentaje accionistas mujer",
+                "type": "column",
+                "valueField": "Female",
+                "labelText": "[[value]]%"
+            }
+            ],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+        var chart14 = AmCharts.makeChart("chart14", {
+            "titles": [
+                {
+                    "text": "Número de integrantes de la mesa de administración",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "Número de consejeros",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#659F70", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "percent": 6,
+                },
+                {
+                "year": "2020",
+                "percent": 6,
+                },
+                {
+                "year": "2021",
+                "percent": 5,
+                },
+                {
+                "year": "2022",
+                "percent": 5,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<span style='font-size:15px;'>[[value]]</span>",
+                "fillAlphas": 1,
+                "title": "Efectivo / Número de Casos",
+                "type": "column",
+                "valueField": "percent",
+                "labelText": "[[value]]"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+        var chart15 = AmCharts.makeChart("chart15", {
+            "titles": [
+                {
+                    "text": "Relación Hombres y Mujeres.",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "Porcentaje integrantes de la mesa de administración H y M",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#4D7E56", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "legend": {
+                "useGraphSettings": true,
+                "markerSize": 12,
+                "valueWidth": 0,
+                "verticalGap": 0,
+                "align": "center"
+             },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "Male": 100,
+                "Female": 0,
+                },
+                {
+                "year": "2020",
+                "Male": 100,
+                "Female": 0,
+                },
+                {
+                "year": "2021",
+                "Male": 100,
+                "Female": 0,
+                },
+                {
+                "year": "2022",
+                "Male": 100,
+                "Female": 0,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [
+                {
+                "balloonText": "<span style='font-size:15px;'>[[value]]%</span>",
+                "fillAlphas": 1,
+                "title": "Porcentaje accionistas hombres",
+                "type": "column",
+                "valueField": "Male",
+                "labelText": "[[value]]%"
+            },
+                {
+                "balloonText": "<span style='font-size:15px;'>[[value]]%</span>",
+                "fillAlphas": 1,
+                "title": "Porcentaje accionistas mujer",
+                "type": "column",
+                "valueField": "Female",
+                "labelText": "[[value]]%"
+            }
+            ],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+        var chart16 = AmCharts.makeChart("chart16", {
+            "titles": [
+                {
+                    "text": "Cantidad de comités",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "Número de comités",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#335739", "#52915D"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "percent": 6,
+                },
+                {
+                "year": "2020",
+                "percent": 7,
+                },
+                {
+                "year": "2021",
+                "percent": 6,
+                },
+                {
+                "year": "2022",
+                "percent": 6,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<span style='font-size:15px;'>[[value]]</span>",
+                "fillAlphas": 1,
+                "title": "Efectivo / Número de Casos",
+                "type": "column",
+                "valueField": "percent",
+                "labelText": "[[value]]"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+        var chart17 = AmCharts.makeChart("chart17", {
+            "titles": [
+                {
+                    "text": "Cantidad de integrantes en su totalidad",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "Número de integrantes en comités",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#52915D", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "percent": 57,
+                },
+                {
+                "year": "2020",
+                "percent": 57,
+                },
+                {
+                "year": "2021",
+                "percent": 50,
+                },
+                {
+                "year": "2022",
+                "percent": 50,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<span style='font-size:15px;'>[[value]]</span>",
+                "fillAlphas": 1,
+                "title": "Efectivo / Número de Casos",
+                "type": "column",
+                "valueField": "percent",
+                "labelText": "[[value]]"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+        var chart18 = AmCharts.makeChart("chart18", {
+            "titles": [
+                {
+                    "text": "Relación Hombres y Mujeres.",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "Porcentaje integrantes en comités H y M",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#52915D", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "legend": {
+                "useGraphSettings": true,
+                "markerSize": 12,
+                "valueWidth": 0,
+                "verticalGap": 0,
+                "align": "center"
+             },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "Male": 91.2,
+                "Female": 8.8,
+                },
+                {
+                "year": "2020",
+                "Male": 91.2,
+                "Female": 8.8,
+                },
+                {
+                "year": "2021",
+                "Male": 90,
+                "Female": 10,
+                },
+                {
+                "year": "2022",
+                "Male": 90,
+                "Female": 10,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [
+                {
+                "balloonText": "<span style='font-size:15px;'>[[value]]%</span>",
+                "fillAlphas": 1,
+                "title": "Porcentaje accionistas hombres",
+                "type": "column",
+                "valueField": "Male",
+                "labelText": "[[value]]%"
+            },
+                {
+                "balloonText": "<span style='font-size:15px;'>[[value]]%</span>",
+                "fillAlphas": 1,
+                "title": "Porcentaje accionistas mujer",
+                "type": "column",
+                "valueField": "Female",
+                "labelText": "[[value]]%"
+            }
+            ],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+
+
+    });
+    </script>
+{% endblock %}

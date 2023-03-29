@@ -1,0 +1,99 @@
+{% extends 'layauts/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="p-0">
+        <div class="container-fluid">
+            <div class="card mb-0">
+                <div class="card-body">
+                    <div class="row gx-5 bg-white">
+                        <div class="col-md-7 mb-4">
+                            <div class="chart" style="width:100%;height: 400px" id="chart6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block otherscripts %}
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <script src="{% static 'js/amCharts/amcharts.js'%}"></script>
+    <script src="{% static 'js/amCharts/serial.min.js'%}"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var BARCHARTHOME = document.getElementById('barChartHome2');
+
+        var chart6 = AmCharts.makeChart("chart6", {
+            "titles": [
+                {
+                    "text": "Se registra cuanto CO2 se emitió durante el año",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "GHG emission.",
+                     "size": 12
+                 }
+            ],
+            "fontSize": 14,
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#52915D", "#335739"],
+            "balloon": {
+                "adjustBorderColor": false,
+                "horizontalPadding": 10,
+                "verticalPadding": 8,
+                "color": "#ffffff"
+            },
+            "dataProvider": [
+                {
+                "year": "2019",
+                "percent": 5051700000,
+                },
+                {
+                "year": "2020",
+                "percent": 3639600000,
+                },
+                {
+                "year": "2021",
+                "percent": 3707600000,
+                },
+                {
+                "year": "2022",
+                "percent": 2788800000,
+                }
+            ],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left",
+                "gridAlpha": 0,
+                "labelsEnabled": false,
+                "minimum": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "balloonText": "<span style='font-size:15px;'>[[value]]</span>",
+                "fillAlphas": 1,
+                "title": "Efectivo / Activos Totales",
+                "type": "column",
+                "valueField": "percent",
+                "labelText": "[[value]]"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": .5,
+                "tickLength": 0,
+                "gridAlpha": 0
+            },
+            "export": {
+                "enabled": true
+            }
+        });
+
+
+
+    });
+    </script>
+{% endblock %}
