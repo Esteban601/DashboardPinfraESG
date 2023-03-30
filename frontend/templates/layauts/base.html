@@ -130,6 +130,17 @@ l116 0 133 97 c73 53 135 103 138 110 7 17 -15 43 -36 43 -9 0 -49 -20 -90
                             Utilidad neta
                             </a>
                         </li>
+                        <li class="{% if page == 'salario_min' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'salario_min' %}">
+                            Ratio de salario mínimo</br>
+                                entre hombres y mujeres
+                            </a>
+                        </li>
+                        <li class="{% if page == 'obligaciones_laborales' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'obligaciones_laborales' %}">
+                            Obligaciones laborales al retiro
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

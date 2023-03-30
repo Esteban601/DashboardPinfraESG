@@ -27,6 +27,8 @@ urlpatterns = [
         path('impuestos_utilidad', views.impuestos_utilidad, name='impuestos_utilidad'),
         path('dividendos_pagados', views.dividendos_pagados, name='dividendos_pagados'),
         path('utilidad_neta', views.utilidad_neta, name='utilidad_neta'),
+        path('salario_min', views.salario_min, name='salario_min'),
+        path('obligaciones_laborales', views.obligaciones_laborales, name='obligaciones_laborales'),
 
 
         path('', views.index, name='aviso-privacidad'),

@@ -177,3 +177,19 @@ def utilidad_neta(request):
         'section':'economicos'
     }
     return render(request, 'frontend/economicos/utilidad_neta.html', context)
+
+
+def salario_min(request):
+    context = {
+        'page':'salario_min',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/salario_min.html', context)
+
+
+def obligaciones_laborales(request):
+    context = {
+        'page':'obligaciones_laborales',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/obligaciones_laborales.html', context)
