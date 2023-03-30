@@ -19,6 +19,12 @@ urlpatterns = [
         path('equidad_genero', views.equidad_genero, name='equidad_genero'),
         path('relacion_clientes', views.relacion_clientes, name='relacion_clientes'),
         path('ciberseguridad', views.ciberseguridad, name='ciberseguridad'),
+
+        path('ingresos', views.ingresos, name='ingresos'),
+        path('costos', views.costos, name='costos'),
+        path('operacion', views.operacion, name='operacion'),
+
+
         path('', views.index, name='aviso-privacidad'),
         path('', views.index, name='search'),
         path('', views.index, name='economia')

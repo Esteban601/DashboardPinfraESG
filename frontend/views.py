@@ -117,3 +117,31 @@ def ciberseguridad(request):
         'section':'medio ambiente'
     }
     return render(request, 'frontend/ciberseguridad.html', context)
+
+##################
+# Económicos
+##################
+
+
+def ingresos(request):
+    context = {
+        'page':'ingresos',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/ingresos.html', context)
+
+
+def costos(request):
+    context = {
+        'page':'costos',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/costos.html', context)
+
+
+def operacion(request):
+    context = {
+        'page':'operacion',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/operacion.html', context)

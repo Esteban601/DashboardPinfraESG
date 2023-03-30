@@ -1,0 +1,124 @@
+{% extends 'layauts/base.html' %}
+{% load static %}
+{% block content %}
+<section class="p-0">
+    <div class="container-fluid">
+        <div class="card mb-0">
+            <div class="card-body">
+                <div class="row gx-5 bg-white">
+                    <div class="col-md-6 mb-6">
+                        <div class="chart" style="width:100%;height: 400px" id="chart5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block otherscripts %}
+<link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+<script src="{% static 'js/amCharts/amcharts.js'%}"></script>
+<script src="{% static 'js/amCharts/serial.min.js'%}"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var BARCHARTHOME = document.getElementById('barChartHome2');
+
+        var chart5 = AmCharts.makeChart("chart5", {
+            "type": "serial",
+            "theme": "none",
+            "legend": {
+                "horizontalGap": 10,
+                "maxColumns": 1,
+                "position": "bottom",
+                "useGraphSettings": true,
+                "markerSize": 10
+            },
+            "dataProvider": [
+                {
+                    "year": 2019,
+                    "honorarios":  83489,
+                    "sueldos":  26017,
+                    "otros":  42475,
+                    "total":  151981,
+                },
+                {
+                    "year": 2020,
+                    "honorarios":  91119,
+                    "sueldos":  26171,
+                    "otros":  36830,
+                    "total":   154120,
+                },
+                {
+                    "year": 2021,
+                    "honorarios":  62595,
+                    "sueldos":  41769,
+                    "otros":  95088,
+                    "total":   199452,
+                },
+                {
+                    "year": 2022,
+                    "honorarios":  58174,
+                    "sueldos":  47071,
+                    "otros":  110744,
+                    "total":   215989,
+                }
+            ],
+            "valueAxes": [{
+                "stackType": "regular",
+                "axisAlpha": 0.3,
+                "gridAlpha": 0
+            }],
+            "graphs": [
+                {
+                    "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                    "fillAlphas": 0.8,
+                    "labelText": "[[value]]",
+                    "lineAlpha": 0.3,
+                    "title": "Honorarios y consultoría externa",
+                    "type": "column",
+                    "color": "#000000",
+                    "valueField": "honorarios"
+                },
+                {
+                    "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                    "fillAlphas": 0.8,
+                    "labelText": "[[value]]",
+                    "lineAlpha": 0.3,
+                    "title": "Sueldos y salarios",
+                    "type": "column",
+                    "color": "#000000",
+                    "valueField": "sueldos"
+                },
+                {
+                    "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                    "fillAlphas": 0.8,
+                    "labelText": "[[value]]",
+                    "lineAlpha": 0.3,
+                    "title": "Otros",
+                    "type": "column",
+                    "color": "#000000",
+                    "valueField": "otros"
+                },
+                {
+                    "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                    "fillAlphas": 0.8,
+                    "labelText": "[[value]]",
+                    "lineAlpha": 0.3,
+                    "title": "Total",
+                    "type": "column",
+                    "color": "#000000",
+                    "valueField": "total"
+                }
+            ],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": 0,
+                "gridAlpha": 0,
+                "position": "left"
+            }
+
+        });
+    });
+</script>
+{% endblock %}
