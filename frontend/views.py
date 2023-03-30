@@ -145,3 +145,35 @@ def operacion(request):
         'section':'economicos'
     }
     return render(request, 'frontend/economicos/operacion.html', context)
+
+
+def financieros(request):
+    context = {
+        'page':'financieros',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/financieros.html', context)
+
+
+def impuestos_utilidad(request):
+    context = {
+        'page':'impuestos_utilidad',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/impuestos_utilidad.html', context)
+
+
+def dividendos_pagados(request):
+    context = {
+        'page':'dividendos_pagados',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/dividendos_pagados.html', context)
+
+
+def utilidad_neta(request):
+    context = {
+        'page':'utilidad_neta',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/utilidad_neta.html', context)

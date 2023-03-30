@@ -25,7 +25,9 @@
 
         var chart5 = AmCharts.makeChart("chart5", {
             "type": "serial",
+            "addClassNames": true,
             "theme": "none",
+            "colors": ["#8ADA96", "#335739", '#0D8ECF', '#ffffff'],
             "legend": {
                 "horizontalGap": 10,
                 "maxColumns": 1,
@@ -36,27 +38,31 @@
             "dataProvider": [
                 {
                     "year": 2019,
-                    "honorarios": 83489,
-                    "sueldos": 26017,
-                    "otros": 42475,
+                    "concesiones":  8614630,
+                    "construccion":  3028920,
+                    "materiales":  406375,
+                    "total":   12049925,
                 },
                 {
                     "year": 2020,
-                    "honorarios": 91119,
-                    "sueldos": 26171,
-                    "otros": 36830,
+                    "concesiones":  8047316,
+                    "construccion":  1543888,
+                    "materiales":  341839,
+                    "total":   9933043,
                 },
                 {
                     "year": 2021,
-                    "honorarios": 62595,
-                    "sueldos": 41769,
-                    "otros": 95088,
+                    "concesiones":  10146572,
+                    "construccion":  1697148,
+                    "materiales":  576148,
+                    "total":   12419868,
                 },
                 {
                     "year": 2022,
-                    "honorarios": 58173.667,
-                    "sueldos": 47071,
-                    "otros": 110744,
+                    "concesiones":  10468115,
+                    "construccion":  758213,
+                    "materiales":  611227,
+                    "total":   11837555,
                 }
             ],
             "valueAxes": [{
@@ -70,30 +76,40 @@
                     "fillAlphas": 0.8,
                     "labelText": "[[value]]",
                     "lineAlpha": 0.3,
-                    "title": "Honorarios y consultoría externa",
+                    "title": "Concesiones",
                     "type": "column",
                     "color": "#000000",
-                    "valueField": "honorarios"
+                    "valueField": "concesiones"
                 },
                 {
                     "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
                     "fillAlphas": 0.8,
                     "labelText": "[[value]]",
                     "lineAlpha": 0.3,
-                    "title": "Sueldos y salarios",
+                    "title": "Construcción",
                     "type": "column",
                     "color": "#000000",
-                    "valueField": "sueldos"
+                    "valueField": "construccion"
                 },
                 {
                     "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
                     "fillAlphas": 0.8,
                     "labelText": "[[value]]",
                     "lineAlpha": 0.3,
-                    "title": "Otros",
+                    "title": "Materiales",
                     "type": "column",
                     "color": "#000000",
-                    "valueField": "otros"
+                    "valueField": "materiales"
+                },
+                {
+                    "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                    "fillAlphas": 0.8,
+                    "labelText": "[[value]]",
+                    "lineAlpha": 0.3,
+                    "title": "Total",
+                    "type": "column",
+                    "color": "#000000",
+                    "valueField": "total"
                 }
             ],
             "categoryField": "year",

@@ -96,13 +96,39 @@ l116 0 133 97 c73 53 135 103 138 110 7 17 -15 43 -36 43 -9 0 -49 -20 -90
                         Económicos</a>
                     <ul class="collapse list-unstyled collapse show" id="economicosdropdownDropdown">
                         <li class="{% if page == 'ingresos' %}active{% endif %}">
-                            <a class="sidebar-link" href="{% url 'ingresos' %}">Desglose de ingresos</a>
+                            <a class="sidebar-link" href="{% url 'ingresos' %}">
+                                Desglose de ingresos
+                            </a>
                         </li>
                         <li class="{% if page == 'costos' %}active{% endif %}">
-                            <a class="sidebar-link" href="{% url 'costos' %}">Desglose de costos</a>
+                            <a class="sidebar-link" href="{% url 'costos' %}">
+                                Desglose de costos
+                            </a>
                         </li>
                         <li class="{% if page == 'operacion' %}active{% endif %}">
-                            <a class="sidebar-link" href="{% url 'operacion' %}">Gastos de operación</a>
+                            <a class="sidebar-link" href="{% url 'operacion' %}">
+                                Gastos de operación
+                            </a>
+                        </li>
+                        <li class="{% if page == 'financieros' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'financieros' %}">
+                                Gastos financieros
+                            </a>
+                        </li>
+                        <li class="{% if page == 'impuestos_utilidad' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'impuestos_utilidad' %}">
+                                Impuestos a la utilidad
+                            </a>
+                        </li>
+                        <li class="{% if page == 'dividendos_pagados' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'dividendos_pagados' %}">
+                            Dividendos pagados
+                            </a>
+                        </li>
+                        <li class="{% if page == 'utilidad_neta' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'utilidad_neta' %}">
+                            Utilidad neta
+                            </a>
                         </li>
                     </ul>
                 </li>

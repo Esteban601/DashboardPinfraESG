@@ -23,6 +23,10 @@ urlpatterns = [
         path('ingresos', views.ingresos, name='ingresos'),
         path('costos', views.costos, name='costos'),
         path('operacion', views.operacion, name='operacion'),
+        path('financieros', views.financieros, name='financieros'),
+        path('impuestos_utilidad', views.impuestos_utilidad, name='impuestos_utilidad'),
+        path('dividendos_pagados', views.dividendos_pagados, name='dividendos_pagados'),
+        path('utilidad_neta', views.utilidad_neta, name='utilidad_neta'),
 
 
         path('', views.index, name='aviso-privacidad'),

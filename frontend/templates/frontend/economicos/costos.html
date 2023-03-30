@@ -24,6 +24,19 @@
         var BARCHARTHOME = document.getElementById('barChartHome2');
 
         var chart5 = AmCharts.makeChart("chart5", {
+            "titles": [
+                {
+                    "text": "Desglose de costos.",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "Puede conectarse al valor económico distribuido a los respectivas cadenas de suministro.",
+                     "size": 12
+                 }
+            ],
+            "addClassNames": true,
+            "colors": ["#8ADA96", "#335739", '#0D8ECF', '#ffffff'],
             "type": "serial",
             "theme": "none",
             "legend": {
