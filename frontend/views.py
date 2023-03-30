@@ -225,3 +225,35 @@ def inversion_ausencias(request):
         'section':'economicos'
     }
     return render(request, 'frontend/economicos/inversion_ausencias.html', context)
+
+
+def inversion_prestaciones(request):
+    context = {
+        'page':'inversion_prestaciones',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/inversion_prestaciones.html', context)
+
+
+def invertido_iniciativas(request):
+    context = {
+        'page':'invertido_iniciativas',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/invertido_iniciativas.html', context)
+
+
+def perdidas_demandas(request):
+    context = {
+        'page':'perdidas_demandas',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/perdidas_demandas.html', context)
+
+
+def maquinaria_averiada(request):
+    context = {
+        'page':'maquinaria_averiada',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/maquinaria_averiada.html', context)

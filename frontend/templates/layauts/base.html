@@ -162,6 +162,26 @@ l116 0 133 97 c73 53 135 103 138 110 7 17 -15 43 -36 43 -9 0 -49 -20 -90
                                 Inversión por ausencias
                             </a>
                         </li>
+                        <li class="{% if page == 'inversion_prestaciones' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'inversion_prestaciones' %}">
+                                Inversión por prestaciones
+                            </a>
+                        </li>
+                        <li class="{% if page == 'invertido_iniciativas' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'invertido_iniciativas' %}">
+                                Total invertido en iniciativas
+                            </a>
+                        </li>
+                        <li class="{% if page == 'perdidas_demandas' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'perdidas_demandas' %}">
+                                Total perdido en demandas
+                            </a>
+                        </li>
+                        <li class="{% if page == 'maquinaria_averiada' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'maquinaria_averiada' %}">
+                                Maquinaria averiada
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

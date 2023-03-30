@@ -33,6 +33,10 @@ urlpatterns = [
         path('inversiones_comunitarias', views.inversiones_comunitarias, name='inversiones_comunitarias'),
         path('ejecutivos_contratados', views.ejecutivos_contratados, name='ejecutivos_contratados'),
         path('inversion_ausencias', views.inversion_ausencias, name='inversion_ausencias'),
+        path('inversion_prestaciones', views.inversion_prestaciones, name='inversion_prestaciones'),
+        path('invertido_iniciativas', views.invertido_iniciativas, name='invertido_iniciativas'),
+        path('perdidas_demandas', views.perdidas_demandas, name='perdidas_demandas'),
+        path('maquinaria_averiada', views.maquinaria_averiada, name='maquinaria_averiada'),
 
 
         path('', views.index, name='aviso-privacidad'),
