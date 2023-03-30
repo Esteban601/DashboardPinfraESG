@@ -40,6 +40,7 @@ urlpatterns = [
 
         path('consumo_energetico', views.consumo_energetico, name='consumo_energetico'),
         path('consumo_energia_renobable', views.consumo_energia_renobable, name='consumo_energia_renobable'),
+        path('reduccion_consumo_energia', views.reduccion_consumo_energia, name='reduccion_consumo_energia'),
 
 
         path('', views.index, name='aviso-privacidad'),

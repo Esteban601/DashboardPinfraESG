@@ -278,3 +278,11 @@ def consumo_energia_renobable(request):
         'section':'economicos'
     }
     return render(request, 'frontend/ambientales/consumo_energia_renobable.html', context)
+
+
+def reduccion_consumo_energia(request):
+    context = {
+        'page':'reduccion_consumo_energia',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/ambientales/reduccion_consumo_energia.html', context)
