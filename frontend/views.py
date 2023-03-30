@@ -257,3 +257,24 @@ def maquinaria_averiada(request):
         'section':'economicos'
     }
     return render(request, 'frontend/economicos/maquinaria_averiada.html', context)
+
+
+###############
+# Ambientales
+##############
+
+
+def consumo_energetico(request):
+    context = {
+        'page':'consumo_energetico',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/ambientales/consumo_energetico.html', context)
+
+
+def consumo_energia_renobable(request):
+    context = {
+        'page':'consumo_energia_renobable',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/ambientales/consumo_energia_renobable.html', context)

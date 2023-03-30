@@ -38,6 +38,9 @@ urlpatterns = [
         path('perdidas_demandas', views.perdidas_demandas, name='perdidas_demandas'),
         path('maquinaria_averiada', views.maquinaria_averiada, name='maquinaria_averiada'),
 
+        path('consumo_energetico', views.consumo_energetico, name='consumo_energetico'),
+        path('consumo_energia_renobable', views.consumo_energia_renobable, name='consumo_energia_renobable'),
+
 
         path('', views.index, name='aviso-privacidad'),
         path('', views.index, name='search'),

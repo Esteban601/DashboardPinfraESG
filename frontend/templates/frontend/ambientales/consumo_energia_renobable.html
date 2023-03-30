@@ -1,0 +1,109 @@
+{% extends 'layauts/base.html' %}
+{% load static %}
+{% block content %}
+<section class="p-0">
+    <div class="container-fluid">
+        <div class="card mb-0">
+            <div class="card-body">
+                <div class="row gx-5 bg-white">
+                    <div class="col-md-6 mb-6">
+                        <div class="chart" style="width:100%;height: 400px" id="chart5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block otherscripts %}
+<link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+<script src="{% static 'js/amCharts/amcharts.js'%}"></script>
+<script src="{% static 'js/amCharts/serial.min.js'%}"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var BARCHARTHOME = document.getElementById('barChartHome2');
+
+        var chart5 = AmCharts.makeChart("chart5", {
+            "titles": [
+                {
+                    "text": "Producción y consumo de energía renovable",
+                    "size": 16,
+                    "color": "#000000"
+                },
+                 {
+                     "text": "",
+                     "size": 12
+                 }
+            ],
+            "type": "serial",
+            "addClassNames": true,
+            "theme": "none",
+            "colors": ["#8ADA96", "#335739", '#0D8ECF', '#ffffff'],
+            "legend": {
+                "horizontalGap": 10,
+                "maxColumns": 1,
+                "position": "bottom",
+                "useGraphSettings": true,
+                "markerSize": 10
+            },
+            "dataProvider": [
+                {
+                    "year": 2019,
+                    "produccion":  12849,
+                    "consumo":  18948
+                },
+                {
+                    "year": 2020,
+                    "produccion":  12849,
+                    "consumo":  13984
+                },
+                {
+                    "year": 2021,
+                    "produccion":  12849,
+                    "consumo":  17940
+                },
+                {
+                    "year": 2022,
+                    "produccion":  12849,
+                    "consumo":  15949
+                }
+            ],
+            "valueAxes": [{
+                "stackType": "regular",
+                "axisAlpha": 0.3,
+                "gridAlpha": 0
+            }],
+            "graphs": [
+                {
+                    "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                    "fillAlphas": 0.8,
+                    "labelText": "[[value]]",
+                    "lineAlpha": 0.3,
+                    "title": "Producción",
+                    "type": "column",
+                    "color": "#000000",
+                    "valueField": "produccion"
+                },
+                {
+                    "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                    "fillAlphas": 0.8,
+                    "labelText": "[[value]]",
+                    "lineAlpha": 0.3,
+                    "title": "Consumo",
+                    "type": "column",
+                    "color": "#000000",
+                    "valueField": "consumo"
+                }
+            ],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": 0,
+                "gridAlpha": 0,
+                "position": "left"
+            }
+
+        });
+    });
+</script>
+{% endblock %}
