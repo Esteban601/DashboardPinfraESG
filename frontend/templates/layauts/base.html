@@ -141,6 +141,27 @@ l116 0 133 97 c73 53 135 103 138 110 7 17 -15 43 -36 43 -9 0 -49 -20 -90
                             Obligaciones laborales al retiro
                             </a>
                         </li>
+                        <li class="{% if page == 'inversion_proyecto' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'inversion_proyecto' %}">
+                            Inversión por proyecto
+                            </a>
+                        </li>
+                        <li class="{% if page == 'inversiones_comunitarias' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'inversiones_comunitarias' %}">
+                            Inversiones comunitarias
+                            </a>
+                        </li>
+                        <li class="{% if page == 'ejecutivos_contratados' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'ejecutivos_contratados' %}">
+                                Altos ejecutivos y mandos medios </br>
+                                contratados en la comunidad local
+                            </a>
+                        </li>
+                        <li class="{% if page == 'inversion_ausencias' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'inversion_ausencias' %}">
+                                Inversión por ausencias
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

@@ -29,6 +29,10 @@ urlpatterns = [
         path('utilidad_neta', views.utilidad_neta, name='utilidad_neta'),
         path('salario_min', views.salario_min, name='salario_min'),
         path('obligaciones_laborales', views.obligaciones_laborales, name='obligaciones_laborales'),
+        path('inversion_proyecto', views.inversion_proyecto, name='inversion_proyecto'),
+        path('inversiones_comunitarias', views.inversiones_comunitarias, name='inversiones_comunitarias'),
+        path('ejecutivos_contratados', views.ejecutivos_contratados, name='ejecutivos_contratados'),
+        path('inversion_ausencias', views.inversion_ausencias, name='inversion_ausencias'),
 
 
         path('', views.index, name='aviso-privacidad'),

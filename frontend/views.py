@@ -193,3 +193,35 @@ def obligaciones_laborales(request):
         'section':'economicos'
     }
     return render(request, 'frontend/economicos/obligaciones_laborales.html', context)
+
+
+def inversion_proyecto(request):
+    context = {
+        'page':'inversion_proyecto',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/inversion_proyecto.html', context)
+
+
+def inversiones_comunitarias(request):
+    context = {
+        'page':'inversiones_comunitarias',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/inversiones_comunitarias.html', context)
+
+
+def ejecutivos_contratados(request):
+    context = {
+        'page':'ejecutivos_contratados',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/ejecutivos_contratados.html', context)
+
+
+def inversion_ausencias(request):
+    context = {
+        'page':'inversion_ausencias',
+        'section':'economicos'
+    }
+    return render(request, 'frontend/economicos/inversion_ausencias.html', context)
