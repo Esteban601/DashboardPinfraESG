@@ -286,3 +286,24 @@ def reduccion_consumo_energia(request):
         'section':'economicos'
     }
     return render(request, 'frontend/ambientales/reduccion_consumo_energia.html', context)
+
+
+#############################
+#sociales
+#############################
+
+
+def empleados_funcion(request):
+    context = {
+        'page':'empleados_funcion',
+        'section':'sociales'
+    }
+    return render(request, 'frontend/sociales/empleados_funcion.html', context)
+
+
+def empleados_sindicato(request):
+    context = {
+        'page':'empleados_sindicato',
+        'section':'sociales'
+    }
+    return render(request, 'frontend/sociales/empleados_sindicato.html', context)

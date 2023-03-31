@@ -26,17 +26,17 @@
         var chart5 = AmCharts.makeChart("chart5", {
             "titles": [
                 {
-                    "text": "Desglose de costos.",
+                    "text": "Número de empleados, desglose por función.",
                     "size": 16,
                     "color": "#000000"
                 },
                  {
-                     "text": "Puede conectarse al valor económico distribuido a los respectivas cadenas de suministro.",
+                     "text": "",
                      "size": 12
                  }
             ],
             "addClassNames": true,
-            "colors": ["#8ADA96", "#335739", '#0D8ECF', '#ffffff'],
+            "colors": ["#8ADA96", "#335739", '#42ab49','#b0f2c2', '#ffffff'],
             "type": "serial",
             "theme": "none",
             "legend": {
@@ -49,31 +49,35 @@
             "dataProvider": [
                 {
                     "year": 2019,
-                    "concesiones": 2651016,
-                    "construccion": 2630345,
-                    "materiales": 281151,
-                    "total":  5562512,
+                    "admon":  339,
+                    "operaciones":  2387,
+                    "construccion":  63,
+                    "directivos":  18,
+                    "total":   2807,
                 },
                 {
                     "year": 2020,
-                    "concesiones": 2946745,
-                    "construccion": 1617095,
-                    "materiales": 225237,
-                    "total":  4789077,
+                    "admon":  408,
+                    "operaciones":  2481,
+                    "construccion":   52,
+                    "directivos":  18,
+                    "total":   2959,
                 },
                 {
                     "year": 2021,
-                    "concesiones": 3685295,
-                    "construccion": 1493365,
-                    "materiales": 400664,
-                    "total":  5579324,
+                    "admon":  351,
+                    "operaciones":  2618,
+                    "construccion":  44,
+                    "directivos":  17,
+                    "total":   3030,
                 },
                 {
                     "year": 2022,
-                    "concesiones": 4128631,
-                    "construccion": 776621,
-                    "materiales": 421863,
-                    "total":  5327116,
+                    "admon":  378,
+                    "operaciones":  2726,
+                    "construccion":  34,
+                    "directivos":  17,
+                    "total":   3155,
                 }
             ],
             "valueAxes": [{
@@ -87,17 +91,27 @@
                     "fillAlphas": 0.8,
                     "labelText": "[[value]]",
                     "lineAlpha": 0.3,
-                    "title": "Concesiones",
+                    "title": "Administración",
                     "type": "column",
                     "color": "#000000",
-                    "valueField": "concesiones"
+                    "valueField": "admon"
                 },
                 {
                     "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
                     "fillAlphas": 0.8,
                     "labelText": "[[value]]",
                     "lineAlpha": 0.3,
-                    "title": "Construcción",
+                    "title": "Operaciones",
+                    "type": "column",
+                    "color": "#000000",
+                    "valueField": "operaciones"
+                },
+                {
+                    "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",
+                    "fillAlphas": 0.8,
+                    "labelText": "[[value]]",
+                    "lineAlpha": 0.3,
+                    "title": "Construcción e ingeniería",
                     "type": "column",
                     "color": "#000000",
                     "valueField": "construccion"
@@ -107,10 +121,10 @@
                     "fillAlphas": 0.8,
                     "labelText": "[[value]]",
                     "lineAlpha": 0.3,
-                    "title": "Materiales",
+                    "title": "Directivos relevantes",
                     "type": "column",
                     "color": "#000000",
-                    "valueField": "materiales"
+                    "valueField": "directivos"
                 },
                 {
                     "balloonText": "<b>[[title]]</b><br><span style='font-size:14px'>[[category]]: <b>[[value]]</b></span>",

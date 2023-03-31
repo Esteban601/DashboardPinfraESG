@@ -42,6 +42,9 @@ urlpatterns = [
         path('consumo_energia_renobable', views.consumo_energia_renobable, name='consumo_energia_renobable'),
         path('reduccion_consumo_energia', views.reduccion_consumo_energia, name='reduccion_consumo_energia'),
 
+        path('empleados_funcion', views.empleados_funcion, name='empleados_funcion'),
+        path('empleados_sindicato', views.empleados_sindicato, name='empleados_sindicato'),
+
 
         path('', views.index, name='aviso-privacidad'),
         path('', views.index, name='search'),
