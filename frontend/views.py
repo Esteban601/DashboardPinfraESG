@@ -307,3 +307,55 @@ def empleados_sindicato(request):
         'section':'sociales'
     }
     return render(request, 'frontend/sociales/empleados_sindicato.html', context)
+
+#############################
+#gobierno_corporativo
+#############################
+
+
+def accionistas_mayoritarios(request):
+    context = {
+        'page':'accionistas_mayoritarios',
+        'section':'gobierno_corporativo'
+    }
+    return render(request, 'frontend/gobierno/accionistas_mayoritarios.html', context)
+
+
+def consejo_admon(request):
+    context = {
+        'page':'consejo_admon',
+        'section':'gobierno_corporativo'
+    }
+    return render(request, 'frontend/gobierno/consejo_admon.html', context)
+
+
+def consejo_admon_independientes(request):
+    context = {
+        'page':'consejo_admon_independientes',
+        'section':'gobierno_corporativo'
+    }
+    return render(request, 'frontend/gobierno/consejo_admon_independientes.html', context)
+
+
+def areas_direccion(request):
+    context = {
+        'page':'areas_direccion',
+        'section':'gobierno_corporativo'
+    }
+    return render(request, 'frontend/gobierno/areas_direccion.html', context)
+
+
+def directivos_relevantes(request):
+    context = {
+        'page':'directivos_relevantes',
+        'section':'gobierno_corporativo'
+    }
+    return render(request, 'frontend/gobierno/directivos_relevantes.html', context)
+
+
+def compensacines_personal_clave(request):
+    context = {
+        'page':'compensacines_personal_clave',
+        'section':'gobierno_corporativo'
+    }
+    return render(request, 'frontend/gobierno/compensacines_personal_clave.html', context)

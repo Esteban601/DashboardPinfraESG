@@ -260,6 +260,61 @@ l116 0 133 97 c73 53 135 103 138 110 7 17 -15 43 -36 43 -9 0 -49 -20 -90
                     </ul>
                 </li>
 
+                <li class="sidebar-item  {% if section == 'gobierno_corporativo' %}active{% endif %}">
+                    <a class="sidebar-link" href="#gobiernodropdownDropdown" data-bs-toggle="collapse"
+                       aria-expanded="false">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                             width="87.000000pt" height="87.000000pt" viewBox="0 0 87.000000 87.000000"
+                             preserveAspectRatio="xMidYMid meet" class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+
+                            <g transform="translate(0.000000,87.000000) scale(0.100000,-0.100000)"
+                            >
+                                <path data-name="layer2" d="M573 701 c-47 -22 -83 -78 -83 -133 -1 -20 -10 -44 -25 -60 -31 -36
+-35 -35 -35 5 0 70 -64 127 -145 127 -30 0 -35 -3 -35 -22 0 -79 50 -143 121
+-154 30 -5 41 -12 45 -30 9 -37 37 -29 59 18 19 39 23 42 84 54 97 20 141 73
+141 169 l0 45 -42 0 c-24 0 -62 -9 -85 -19z" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round"/>
+                                <path data-name="layer1" d="M701 416 c-59 -34 -76 -49 -85 -77 -15 -46 -46 -59 -143 -59 -76 0
+-83 2 -83 20 0 19 7 20 90 20 74 0 91 3 99 17 6 11 6 24 0 35 -9 16 -25 18
+-137 18 l-127 0 -138 -67 -137 -67 61 -62 62 -63 33 26 c52 39 115 53 244 53
+l116 0 133 97 c73 53 135 103 138 110 7 17 -15 43 -36 43 -9 0 -49 -20 -90
+-44z" stroke="#202020" stroke-miterlimit="10" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                        Gobierno corporativo</a>
+                    <ul class="collapse list-unstyled collapse show" id="gobiernodropdownDropdown">
+                        <li class="{% if page == 'accionistas_mayoritarios' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'accionistas_mayoritarios' %}">
+                                Número de accionistas mayoritarios
+                            </a>
+                        </li>
+                        <li class="{% if page == 'consejo_admon' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'consejo_admon' %}">
+                                Número de integrantes del consejo de administración
+                            </a>
+                        </li>
+                        <li class="{% if page == 'consejo_admon_independientes' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'consejo_admon_independientes' %}">
+                                Número de integrantes independientes del consejo de administración
+                            </a>
+                        </li>
+                        <li class="{% if page == 'areas_direccion' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'areas_direccion' %}">
+                                Número de comités, áreas y direcciones
+                            </a>
+                        </li>
+                        <li class="{% if page == 'directivos_relevantes' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'directivos_relevantes' %}">
+                                Número de directivos relevantes
+                            </a>
+                        </li>
+                        <li class="{% if page == 'compensacines_personal_clave' %}active{% endif %}">
+                            <a class="sidebar-link" href="{% url 'compensacines_personal_clave' %}">
+                                Compensaciones al personal clave de la entidad
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <!--                <li class="sidebar-item  {% if section == 'medio ambiente' %}active{% endif %}">-->
                 <!--                    <a class="sidebar-link" href="#exampledropdownDropdown" data-bs-toggle="collapse"-->
                 <!--                       aria-expanded="true">-->

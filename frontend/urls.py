@@ -45,6 +45,13 @@ urlpatterns = [
         path('empleados_funcion', views.empleados_funcion, name='empleados_funcion'),
         path('empleados_sindicato', views.empleados_sindicato, name='empleados_sindicato'),
 
+        path('accionistas_mayoritarios', views.accionistas_mayoritarios, name='accionistas_mayoritarios'),
+        path('consejo_admon', views.consejo_admon, name='consejo_admon'),
+        path('consejo_admon_independientes', views.consejo_admon_independientes, name='consejo_admon_independientes'),
+        path('areas_direccion', views.areas_direccion, name='areas_direccion'),
+        path('directivos_relevantes', views.directivos_relevantes, name='directivos_relevantes'),
+        path('compensacines_personal_clave', views.compensacines_personal_clave, name='compensacines_personal_clave'),
+
 
         path('', views.index, name='aviso-privacidad'),
         path('', views.index, name='search'),
