@@ -500,55 +500,128 @@ l116 0 133 97 c73 53 135 103 138 110 7 17 -15 43 -36 43 -9 0 -49 -20 -90
                                                id="navbarDropdownMenuLinkSeccion" role="button"
                                                data-bs-toggle="dropdown" aria-expanded="false">Categoría</a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkSeccion">
-                                                {% if page != 'materiales' %}
-                                                <li class="active"><a class="dropdown-item"
-                                                                      href="{% url 'materiales' %}">Materiales</a></li>
-                                                {% endif %}
-                                                {% if page != 'energía' %}
-                                                <li class="{% if page == 'energia' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'energia' %}">Energía</a>
+                                                {% if page != 'ingresos' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'ingresos' %}">
+                                                        Desglose de ingresos
+                                                    </a>
                                                 </li>
                                                 {% endif %}
-                                                <li class="{% if page == 'emisiones' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'emisiones' %}">Emisiones</a>
+                                                {% if page != 'costos' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'costos' %}">
+                                                        Desglose de costos
+                                                    </a>
                                                 </li>
-                                                {% if page != 'agua y afluentes' %}
-                                                <li class=""><a class="dropdown-item" href="{% url 'agua_afluentes' %}">Agua
-                                                    y afluentes</a></li>
                                                 {% endif %}
-                                                <li class="{% if page == 'residuos' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'residuos' %}">Residuos</a>
+                                                {% if page != 'operacion' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'operacion' %}">
+                                                        Gastos de operación
+                                                    </a>
                                                 </li>
-                                                <li class="{% if page == 'etica_anticorrupcion' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'etica_anticorrupcion' %}">Ética
-                                                    y Anticorrupción</a></li>
-                                                <li class="{% if page == 'gobierno_corporativo' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'gobierno_corporativo' %}">Gobierno
-                                                    Corporativo</a></li>
-                                                <li class="{% if page == 'analisis_riesgo' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'analisis_riesgo' %}">Análisis
-                                                    de riesgo</a></li>
-                                                <li class="{% if page == 'productos_calidad' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'productos_calidad' %}">Productos
-                                                    de calidad</a></li>
-                                                <li class="{% if page == 'salud_seguridad' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'salud_seguridad' %}">Salud y
-                                                    seguridad</a></li>
-                                                <li class="{% if page == 'capacitacion' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'capacitacion' %}">Capacitación</a>
+                                                {% endif %}
+                                                {% if page != 'financieros' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'financieros' %}">
+                                                        Gastos financieros
+                                                    </a>
                                                 </li>
-                                                <li class="{% if page == 'equidad_genero' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'equidad_genero' %}">Equidad
-                                                    de género</a></li>
-                                                <li class="{% if page == 'relacion_clientes' %}active{% endif %}"><a
-                                                        class="dropdown-item" href="{% url 'relacion_clientes' %}">Relación
-                                                    con clientes</a></li>
-                                                <li class="{% if page == 'ciberseguridad' %}active{% endif %}"><a
-                                                        class="sidebar-link" href="{% url 'ciberseguridad' %}">Ciberseguridad </a>
+                                                {% endif %}
+                                                {% if page != 'impuestos_utilidad' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'impuestos_utilidad' %}">
+                                                        Impuestos a la utilidad
+                                                    </a>
                                                 </li>
-
+                                                {% endif %}
+                                                {% if page != 'dividendos_pagados' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'dividendos_pagados' %}">
+                                                        Dividendos pagados
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'utilidad_neta' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'utilidad_neta' %}">
+                                                        Utilidad neta
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'salario_min' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'salario_min' %}">
+                                                        Ratio de salario mínimo</br>
+                                                        entre hombres y mujeres
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'obligaciones_laborales' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'obligaciones_laborales' %}">
+                                                        Obligaciones laborales al retiro
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'inversion_proyecto' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'inversion_proyecto' %}">
+                                                        Inversión por proyecto
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'inversiones_comunitarias' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'inversiones_comunitarias' %}">
+                                                        Inversiones comunitarias
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'ejecutivos_contratados' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'ejecutivos_contratados' %}">
+                                                        Altos ejecutivos y mandos medios </br>
+                                                        contratados en la comunidad local
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'inversion_ausencias' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'inversion_ausencias' %}">
+                                                        Inversión por ausencias
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'inversion_prestaciones' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'inversion_prestaciones' %}">
+                                                        Inversión por prestaciones
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'invertido_iniciativas' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'invertido_iniciativas' %}">
+                                                        Total invertido en iniciativas
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'perdidas_demandas' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'perdidas_demandas' %}">
+                                                        Total perdido en demandas
+                                                    </a>
+                                                </li>
+                                                {% endif %}
+                                                {% if page != 'maquinaria_averiada' %}
+                                                <li class="active">
+                                                    <a class="sidebar-link" href="{% url 'maquinaria_averiada' %}">
+                                                        Maquinaria averiada
+                                                    </a>
+                                                </li>
+                                                {% endif %}
                                             </ul>
-
                                     </ul>
                                 </ul>
                             </div>
@@ -562,8 +635,8 @@ l116 0 133 97 c73 53 135 103 138 110 7 17 -15 43 -36 43 -9 0 -49 -20 -90
                     <div class="card mb-1 p-4">
                         <h1 class="text-capitalize mb-2">{{ page }}</h1>
                         <h2 class="text-capitalize">{{ section }}</h2>
-<!--                        <h2 class="text-capitalize">{% trans section %}</h2>-->
-<!--                        <h2 class="text-capitalize">{% trans  page %}</h2>-->
+                        <!--                        <h2 class="text-capitalize">{% trans section %}</h2>-->
+                        <!--                        <h2 class="text-capitalize">{% trans  page %}</h2>-->
                     </div>
                 </div>
             </section>
