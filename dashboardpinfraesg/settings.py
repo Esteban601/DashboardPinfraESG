@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import django_heroku
+from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -52,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+
 ]
 
 ROOT_URLCONF = 'dashboardpinfraesg.urls'
@@ -133,3 +136,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
 # ]
 
 django_heroku.settings(locals())
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
+LANGUAGES = [
+    ('es', _('Spanish')),
+]
+LANGUAGE_CODE = 'es'
+
+# DOCS_BASE_URL = 'https://files.coxenergyamerica.com'

@@ -1,15 +1,19 @@
 from django.shortcuts import render
+from django.utils.translation import gettext as _
+
 
 # Create your views here.
 
 def index(request):
-    context = { 'page':'index'}
+    context = {
+        'page': _('index')
+    }
     return render(request, 'frontend/index.html', context)
 
 
 def materiales(request):
     context = {
-        'page':'materiales',
+        'page': _('materiales'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/materiales.html', context)
@@ -17,7 +21,7 @@ def materiales(request):
 
 def energia(request):
     context = {
-        'page':'energía',
+        'page': _('energía'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/energia.html', context)
@@ -25,7 +29,7 @@ def energia(request):
 
 def agua_afluentes(request):
     context = {
-        'page':'agua y afluentes',
+        'page': _('agua y afluentes'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/agua_afluentes.html', context)
@@ -33,7 +37,7 @@ def agua_afluentes(request):
 
 def emisiones(request):
     context = {
-        'page':'emisiones',
+        'page': _('emisiones'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/emisiones.html', context)
@@ -41,7 +45,7 @@ def emisiones(request):
 
 def residuos(request):
     context = {
-        'page':'residuos',
+        'page': _('residuos'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/residuos.html', context)
@@ -49,7 +53,7 @@ def residuos(request):
 
 def analisis_riesgo(request):
     context = {
-        'page':'Análisis de riesgos (climático y sistémico)',
+        'page': _('Análisis de riesgos (climático y sistémico)'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/analisis_riesgo.html', context)
@@ -57,7 +61,7 @@ def analisis_riesgo(request):
 
 def etica_anticorrupcion(request):
     context = {
-        'page':'etica y anticorrupcion',
+        'page': _('etica y anticorrupcion'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/etica_anticorrupcion.html', context)
@@ -65,7 +69,7 @@ def etica_anticorrupcion(request):
 
 def gobierno_corporativo(request):
     context = {
-        'page':'gobierno corporativo',
+        'page': _('gobierno corporativo'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/gobierno_corporativo.html', context)
@@ -73,7 +77,7 @@ def gobierno_corporativo(request):
 
 def productos_calidad(request):
     context = {
-        'page':'productos de calidad',
+        'page': _('productos de calidad'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/productos_calidad.html', context)
@@ -81,7 +85,7 @@ def productos_calidad(request):
 
 def salud_seguridad(request):
     context = {
-        'page':'salud y seguridad de los empleados',
+        'page': _('salud y seguridad de los empleados'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/salud_seguridad.html', context)
@@ -89,7 +93,7 @@ def salud_seguridad(request):
 
 def capacitacion(request):
     context = {
-        'page':'capacitación',
+        'page': _('capacitación'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/capacitacion.html', context)
@@ -97,7 +101,7 @@ def capacitacion(request):
 
 def equidad_genero(request):
     context = {
-        'page':'equidad de género y diversidad',
+        'page': _('equidad de género y diversidad'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/equidad_genero.html', context)
@@ -105,7 +109,7 @@ def equidad_genero(request):
 
 def relacion_clientes(request):
     context = {
-        'page':'relación con clientes y comunidades',
+        'page': _('relación con clientes y comunidades'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/relacion_clientes.html', context)
@@ -113,7 +117,7 @@ def relacion_clientes(request):
 
 def ciberseguridad(request):
     context = {
-        'page':'ciberseguridad',
+        'page': _('ciberseguridad'),
         'section':'medio ambiente'
     }
     return render(request, 'frontend/ciberseguridad.html', context)
@@ -125,136 +129,136 @@ def ciberseguridad(request):
 
 def ingresos(request):
     context = {
-        'page':'ingresos',
-        'section':'economicos'
+        'page': _('ingresos'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/ingresos.html', context)
 
 
 def costos(request):
     context = {
-        'page':'costos',
-        'section':'economicos'
+        'page': _('costos'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/costos.html', context)
 
 
 def operacion(request):
     context = {
-        'page':'operacion',
-        'section':'economicos'
+        'page': _('operacion'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/operacion.html', context)
 
 
 def financieros(request):
     context = {
-        'page':'financieros',
-        'section':'economicos'
+        'page': _('financieros'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/financieros.html', context)
 
 
 def impuestos_utilidad(request):
     context = {
-        'page':'impuestos_utilidad',
-        'section':'economicos'
+        'page': _('impuestos_utilidad'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/impuestos_utilidad.html', context)
 
 
 def dividendos_pagados(request):
     context = {
-        'page':'dividendos_pagados',
-        'section':'economicos'
+        'page': _('dividendos_pagados'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/dividendos_pagados.html', context)
 
 
 def utilidad_neta(request):
     context = {
-        'page':'utilidad_neta',
-        'section':'economicos'
+        'page': _('utilidad_neta'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/utilidad_neta.html', context)
 
 
 def salario_min(request):
     context = {
-        'page':'salario_min',
-        'section':'economicos'
+        'page': _('salario_min'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/salario_min.html', context)
 
 
 def obligaciones_laborales(request):
     context = {
-        'page':'obligaciones_laborales',
-        'section':'economicos'
+        'page': _('obligaciones_laborales'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/obligaciones_laborales.html', context)
 
 
 def inversion_proyecto(request):
     context = {
-        'page':'inversion_proyecto',
-        'section':'economicos'
+        'page': _('inversion_proyecto'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/inversion_proyecto.html', context)
 
 
 def inversiones_comunitarias(request):
     context = {
-        'page':'inversiones_comunitarias',
-        'section':'economicos'
+        'page': _('inversiones_comunitarias'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/inversiones_comunitarias.html', context)
 
 
 def ejecutivos_contratados(request):
     context = {
-        'page':'ejecutivos_contratados',
-        'section':'economicos'
+        'page': _('ejecutivos_contratados'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/ejecutivos_contratados.html', context)
 
 
 def inversion_ausencias(request):
     context = {
-        'page':'inversion_ausencias',
-        'section':'economicos'
+        'page': _('inversion_ausencias'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/inversion_ausencias.html', context)
 
 
 def inversion_prestaciones(request):
     context = {
-        'page':'inversion_prestaciones',
-        'section':'economicos'
+        'page': _('inversion_prestaciones'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/inversion_prestaciones.html', context)
 
 
 def invertido_iniciativas(request):
     context = {
-        'page':'invertido_iniciativas',
-        'section':'economicos'
+        'page': _('invertido_iniciativas'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/invertido_iniciativas.html', context)
 
 
 def perdidas_demandas(request):
     context = {
-        'page':'perdidas_demandas',
-        'section':'economicos'
+        'page': _('perdidas_demandas'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/perdidas_demandas.html', context)
 
 
 def maquinaria_averiada(request):
     context = {
-        'page':'maquinaria_averiada',
-        'section':'economicos'
+        'page': _('maquinaria_averiada'),
+        'section': _('economicos')
     }
     return render(request, 'frontend/economicos/maquinaria_averiada.html', context)
 
@@ -266,24 +270,24 @@ def maquinaria_averiada(request):
 
 def consumo_energetico(request):
     context = {
-        'page':'consumo_energetico',
-        'section':'economicos'
+        'page': _('consumo_energetico'),
+        'section': _('ambientales')
     }
     return render(request, 'frontend/ambientales/consumo_energetico.html', context)
 
 
 def consumo_energia_renobable(request):
     context = {
-        'page':'consumo_energia_renobable',
-        'section':'economicos'
+        'page': _('consumo_energia_renobable'),
+        'section': _('ambientales')
     }
     return render(request, 'frontend/ambientales/consumo_energia_renobable.html', context)
 
 
 def reduccion_consumo_energia(request):
     context = {
-        'page':'reduccion_consumo_energia',
-        'section':'economicos'
+        'page': _('reduccion_consumo_energia'),
+        'section': _('ambientales')
     }
     return render(request, 'frontend/ambientales/reduccion_consumo_energia.html', context)
 
@@ -295,16 +299,16 @@ def reduccion_consumo_energia(request):
 
 def empleados_funcion(request):
     context = {
-        'page':'empleados_funcion',
-        'section':'sociales'
+        'page': _('empleados_funcion'),
+        'section': _('sociales')
     }
     return render(request, 'frontend/sociales/empleados_funcion.html', context)
 
 
 def empleados_sindicato(request):
     context = {
-        'page':'empleados_sindicato',
-        'section':'sociales'
+        'page': _('empleados_sindicato'),
+        'section': _('sociales')
     }
     return render(request, 'frontend/sociales/empleados_sindicato.html', context)
 
@@ -315,47 +319,47 @@ def empleados_sindicato(request):
 
 def accionistas_mayoritarios(request):
     context = {
-        'page':'accionistas_mayoritarios',
-        'section':'gobierno_corporativo'
+        'page': _('accionistas_mayoritarios'),
+        'section': _('gobierno_corporativo')
     }
     return render(request, 'frontend/gobierno/accionistas_mayoritarios.html', context)
 
 
 def consejo_admon(request):
     context = {
-        'page':'consejo_admon',
-        'section':'gobierno_corporativo'
+        'page': _('consejo_admon'),
+        'section': _('gobierno_corporativo')
     }
     return render(request, 'frontend/gobierno/consejo_admon.html', context)
 
 
 def consejo_admon_independientes(request):
     context = {
-        'page':'consejo_admon_independientes',
-        'section':'gobierno_corporativo'
+        'page': _('consejo_admon_independientes'),
+        'section': _('gobierno_corporativo')
     }
     return render(request, 'frontend/gobierno/consejo_admon_independientes.html', context)
 
 
 def areas_direccion(request):
     context = {
-        'page':'areas_direccion',
-        'section':'gobierno_corporativo'
+        'page': _('areas_direccion'),
+        'section': _('gobierno_corporativo')
     }
     return render(request, 'frontend/gobierno/areas_direccion.html', context)
 
 
 def directivos_relevantes(request):
     context = {
-        'page':'directivos_relevantes',
-        'section':'gobierno_corporativo'
+        'page': _('directivos_relevantes'),
+        'section': _('gobierno_corporativo')
     }
     return render(request, 'frontend/gobierno/directivos_relevantes.html', context)
 
 
 def compensacines_personal_clave(request):
     context = {
-        'page':'compensacines_personal_clave',
-        'section':'gobierno_corporativo'
+        'page': _('compensacines_personal_clave'),
+        'section': _('gobierno_corporativo')
     }
     return render(request, 'frontend/gobierno/compensacines_personal_clave.html', context)
