@@ -13835,7 +13835,7 @@ canvas {
 }
 
 .navbar .dropdown-menu {
-  display: block;
+  display: none;
   visibility: hidden;
   -webkit-transform: translateY(0.5rem);
   transform: translateY(0.5rem);
